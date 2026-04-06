@@ -1,0 +1,174 @@
+% !TeX root = report.tex
+% 'draft' mode can be used to speed up compilation
+\documentclass[twoside,final]{hcmut-report}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{codespace}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{listingsutf8}
+\newlist{tabenum}{enumerate}{1}
+\setlist[tabenum]{label*=\arabic*.,
+                  labelwidth=2em, 
+                  leftmargin=2em, 
+                  nosep,
+                  before=\begin{minipage}[t]{\hsize},
+                  after=\end{minipage}}
+
+\usepackage{tabularx}
+
+\usepackage[column=0]{cellspace}
+\setlength{\cellspacetoplimit}{\tabcolsep}
+\setlength{\cellspacebottomlimit}{\cellspacetoplimit}
+\addparagraphcolumntypes{X}
+
+% template %
+\newcommand\addrow[2]{#1 & #2\\ \hline}
+
+\newcommand\additemizedrow[2]{#1 &
+        \begin{tabenum}
+            #2
+        \end{tabenum}
+        \\ \hline}
+
+% making stuff convenient %
+\newcommand\id[1]{\addrow{Use case ID}{#1}}
+\newcommand\name[1]{\addrow{Use case Name}{#1}}
+\newcommand\actor[1]{\addrow{Actor}{#1}}
+\newcommand\udescription[1]{\addrow{Description}{#1}}
+\newcommand\precondition[1]{\addrow{Precondition}{#1}}
+\newcommand\trigger[1]{\addrow{Trigger}{#1}}
+\newcommand\postcondition[1]{\additemizedrow{Postcondition}{#1}}
+\newcommand\exceptions[1]{\additemizedrow{Exceptions}{#1}}
+\newcommand\nflow[1]{\additemizedrow{Normal flow}{#1}}
+\newcommand\aflow[1]{\additemizedrow{Alternative flows}{#1}}
+\newenvironment{usecase}{\tabularx{\textwidth}{|0{wl{3cm}}|0{X}|}\hline}{\endtabularx}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+% Draft watermark
+% https://github.com/callegar/LaTeX-draftwatermark
+
+% Encodings
+\usepackage{gensymb,textcomp}
+
+% Better tables
+% Wide tables go to https://tex.stackexchange.com/q/332902
+\usepackage{array,longtable,multicol,multirow,siunitx,tabularx}
+
+% Better enum
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{caption,float}
+
+% Add options for figures, like max width, framing, etc.
+\usepackage[export]{adjustbox}
+
+% References
+% Use \Cref{} instead of \ref{}
+\usepackage[nameinlink]{cleveref}
+
+
+\definecolor{eclipseStrings}{RGB}{42,0.0,255}
+\definecolor{eclipseKeywords}{RGB}{127,0,85}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    commentstyle=\color{eclipseStrings}, % style of comment
+    stringstyle=\color{eclipseKeywords}, % style of strings
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    string=[s]{"}{"},
+    comment=[l]{:\ "},
+    morecomment=[l]{:"},
+    literate=
+        *{0}{{{\color{numb}0}}}{1}
+         {1}{{{\color{numb}1}}}{1}
+         {2}{{{\color{numb}2}}}{1}
+         {3}{{{\color{numb}3}}}{1}
+         {4}{{{\color{numb}4}}}{1}
+         {5}{{{\color{numb}5}}}{1}
+         {6}{{{\color{numb}6}}}{1}
+         {7}{{{\color{numb}7}}}{1}
+         {8}{{{\color{numb}8}}}{1}
+         {9}{{{\color{numb}9}}}{1}
+}
+
+% FOR DEMONSTRATION PURPOSES, REMOVE IN PRODUCTION
+\usepackage{mwe}
+
+% Sub-preambles
+% https://github.com/MartinScharrer/standalone
+
+% Configurations
+\coursename{CO3029 - KHAI PHÁ DỮ LIỆU}
+\reporttype{Báo cáo cuối kì}
+\title{Ứng dụng học máy trong dự đoán giá nhà}
+\advisor{& Đỗ Thanh Thái &}
+\stuname{%
+  & Võ Ngọc Tú & ID 2213857 \\
+  & Nguyễn Xuân Hy & ID 2211409 \\
+  & Nguyễn Hữu Huy Thịnh & ID 2213291\\
+}
+
+% Allow page breaks inside align* environment
+%\allowdisplaybreaks{}
+
+% Makes a lot of things blue, avoid at all costs
+%\everymath{\color{blue}}
+
+% Set depth of numbering for counters
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+
+% Rename some sections
+%\AtBeginDocument{\renewcommand*{\contentsname}{Contents}}
+%\AtBeginDocument{\renewcommand*{\refname}{References}}
+%\AtBeginDocument{\renewcommand*{\bibname}{References}}
+
+% Custom commands
+%\newcommand*\mean[1]{\bar{#1}}
+
+\begin{document}
+\coverpage%
+
+\section*{Phân công công việc}
+\newcounter{memberrowno}
+\setcounter{memberrowno}{0}
+\begin{center}
+ \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llccc}
+   \toprule
+   \multicolumn{1}{c}{\textbf{No.}} & \textbf{Họ và Tên} & \textbf{MSSV} & \textbf{Công việc} & \textbf{Phần trăm}\\
+   \midrule
+   & Nguyễn Anh Khoa & 2211612 & \makecell{XGBoost Regression \\ Tiền xử lý và phân tích dữ liệu} & 100\%\\
+   \midrule
+   & Nguyễn Hữu Huy Thịnh & 2213291 & \makecell{MLP Neural network \\ Đánh giá và so sánh các mô hình} &  100\%\\
+   \midrule
+   & Nguyễn Xuân Hy & 2211409 & \makecell{ Random Forest Regression\\ Thuyết trình \\ Slide thuyết trình} & 100\% \\
+   \midrule
+   & Lưu Chí Lập & 2211830 & \makecell{Linear Regression \\ Slide thuyết trình}& 100\% \\                     
+   \bottomrule
+ \end{tabular}
+\end{center}
+\clearpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+\input{chapters/Preprocessing/Preprocessing.tex}
+\input{chapters/Implement/Solution.tex}
+\input{chapters/Implement/Train.tex}
+\input{chapters/Implement/Conclusion.tex}
+
+\bibliographystyle{plain}
+\nocite{*}
+
+\end{document}

@@ -1,0 +1,42 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Tiền xử lý dữ liệu}{9}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tổng quan về dữ liệu}{9}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Xử lý dữ liệu}{10}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Đọc dữ liệu}{10}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Kiểm tra và xử lý dữ liệu khuyết}{10}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Xử lý dữ liệu phân loại}{10}{subsubsection.1.2.3}%
+\contentsline {section}{\numberline {2}Phân tích dữ liệu}{12}{section.2}%
+\contentsline {section}{\numberline {3}Kiểm tra phân bố và outliers của "price"}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ma trận tương quan của các biến}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Trực quan hóa dữ liệu}{16}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Biến \texttt {area}}{16}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Biến "bedrooms"}{17}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Biến "bathrooms"}{17}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Biến "stories"}{18}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Biến "parking"}{18}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Biến "mainroad"}{19}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Biến "guestroom"}{19}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Biến "basement"}{20}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Biến "hotwaterheating"}{20}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Biến "airconditioning"}{21}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Biến "prefarea"}{21}{subsubsection.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.2.12}Biến "furnishingstatus\_semi-furnished"}{22}{subsubsection.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.2.13}Biến "furnishingstatus\_unfurnished"}{22}{subsubsection.3.2.13}%
+\contentsline {section}{\numberline {4}Phương pháp}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Hồi quy tuyến tính}{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Random Forest}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}XGBoost}{27}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}XGBoost}{30}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}GridSearchCV}{33}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Mạng nơ-ron nhiều lớp}{34}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Xây dựng mô hình dự đoán}{37}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Hồi quy tuyến tính}{38}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Random Forest}{39}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}XGBoost}{41}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Mạng Nơ-ron nhiều lớp}{42}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Đánh giá mô hình dự đoán}{44}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Các Phương pháp Đánh giá Hiệu quả Mô hình}{44}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Kết quả đánh giá}{45}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Đồ thị đánh giá}{46}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Kết luận}{48}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Tổng Kết}{49}{section.7}%
